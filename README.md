@@ -1,33 +1,25 @@
-pride-utilities
+inspector-swing-utils
 ===============
 
-# About PRIDE Utilities
+# About Inspector Swing Utils
 
-The primary purpose of PRIDE Utilities library is to provide commonly used classes shared by all the PRIDE Tool Suite. You may also find it useful for your own computational proteomics projects.
+The primary purpose of Inspector Swing Utils is to provide commonly used classes shared by all the PRIDE Tool Suite. You may also find it useful for your own computational proteomics projects.
 
 # How to cite it:
 
 Wang, R., Fabregat, A., Ríos, D., Ovelleiro, D., Foster, J. M., Côté, R. G., ... & Vizcaíno, J. A. (2012). PRIDE Inspector: a tool to visualize and validate MS proteomics data. Nature biotechnology, 30(2), 135-137. [PDF File](http://www.nature.com/nbt/journal/v30/n2/pdf/nbt.2112.pdf), [Pubmed Record](http://www.ncbi.nlm.nih.gov/pubmed/22318026)
 
 # Main Features
-* Data Structures to represent AminoAcids, Mass Table, etc.
-* Functions to compute different Properties such as isoelectric point, retention time, sequence length and masses.
-* Reference table of the main Ontology terms used in PRIDE-toolsuite. 
-* General functionalities and data structures classes missing in JDK, such as: Tuple.
-* General functionalities like checking email format and availability.
+* Data Sctructures to represent Task, Events, Toolbars, etc
+* Methods to define possible states of PRIDE Inspector 
+* Definition of possible image file extensions such as jpg, png, etc
+* Export Swing component into different file formats 
+* Dialogs to save to an image file format
+* TaskManager that acts as a thread pool, and does the followings tasks:(i) maintain a list of Tasks, (ii) manage a queue of Tasks
 
-# The library provides four key modules:
+# Getting Inspector Swing Utils
 
-* mol: contains classes describing entities at the molecular level, such as: amino acids, neutrual losses, peptides and fragment ions.
-* gui: contains several GUI components, you can use them if you want to replicate some of the features in PRIDE Inspector.
-* data: contains data structures classes are missing from JDK, such as: Tuple.
-* util: contains a selection of convenient classes. For examples: for formatting protein related informations, for checking Internet availability or for verify email addresses.
-
-**Note**: the library is still evolving, we are committed to expand this library and add more useful classes.
-
-# Getting PRIDE Utilities
-
-The zip file in the releases section contains the PRIDE Utilities jar file and all other required libraries.
+The zip file in the releases section contains the Inspector Swing Utils jar file and all other required libraries.
 
 Maven Dependency
 
@@ -35,11 +27,12 @@ PRIDE Utilities library can be used in Maven projects, you can include the follo
  
  ```maven
  <dependency>
-   <groupId>uk.ac.ebi.pride.utils</groupId>
-   <artifactId>pride-utilities</artifactId>
-   <version>0.1.23-SNAPSHOT</version>
+   <groupId>uk.ac.ebi.pride.toolsuite</groupId>
+   <artifactId>inspector-swing-utils</artifactId>
+   <version>1.0.0-SNAPSHOT</version>
  </dependency> 
  ```
+ 
  ```maven
  <!-- EBI repo -->
  <repository>
@@ -68,43 +61,3 @@ Please send us your feedback, including error reports, improvement suggestions, 
 * Wang, R., Fabregat, A., Ríos, D., Ovelleiro, D., Foster, J. M., Côté, R. G., ... & Vizcaíno, J. A. (2012). PRIDE Inspector: a tool to visualize and validate MS proteomics data. Nature biotechnology, 30(2), 135-137. [PDF File](http://www.nature.com/nbt/journal/v30/n2/pdf/nbt.2112.pdf), [Pubmed Record](http://www.ncbi.nlm.nih.gov/pubmed/22318026)
 * Côté, R. G., Griss, J., Dianes, J. A., Wang, R., Wright, J. C., van den Toorn, H. W., ... & Vizcaíno, J. A. (2012). The PRoteomics IDEntification (PRIDE) Converter 2 framework: an improved suite of tools to facilitate data submission to the PRIDE database and the ProteomeXchange consortium. Molecular & Cellular Proteomics, 11(12), 1682-1689. [PRIDE Converter 2](https://code.google.com/p/pride-converter-2/) 
 * Vizcaíno, J. A., Côté, R. G., Csordas, A., Dianes, J. A., Fabregat, A., Foster, J. M., ... & Hermjakob, H. (2013). The PRoteomics IDEntifications (PRIDE) database and associated tools: status in 2013. Nucleic acids research, 41(D1), D1063-D1069. [PRIDE-Archive](http://www.ebi.ac.uk/pride/archive/)
-
-How to use pride-utilities
-===============
-
-# Using PRIDE-Utilities 
-
-Here we will show you how to use the PRIDE Utilitites library to calculate m/z delta and calculate theoretical mass of a given peptide.
-
-### Calculate m/z Delta:
-
-You can find the method for calculating m/z delta from MoleculeUtilitites in uk.ac.ebi.pride.mol package. It requires four input parameters:
-
-```java 
-/*
- * sequence is the peptide sequence in String,
- * precursorMz is the precusor m/z in double,
- * precursorCharge is the precursor charge in double,
- *ptmMasses is a list of post translational modifications in double.
-*/
-
-// Direct call on the method
-Double mzDelta = MolecularUtilitites.calculateDeltaMz(sequence, precursorMz, precursorCharge, ptmMasses);
-```
-
-### Calculate Theoretical Mass
-
-You can also find the method for calculating theoretical mass value from MoleculeUtilitites. It needs two input parameters:
-
-```java
- /*
-  *sequence is the peptide sequence in String,  
-  *masses is a optional list array of masses you want to add as extras.
-  The following lines of code shows you how:
- */
-
- // Direct call on the method
- double result = MolecularUtilitites.calculateTheoreticalMass(sequence, masses);
-
- // Tip: Take a close look at other methods within MoleculeUtilitites, you might find them useful. 
-```
