@@ -1,9 +1,13 @@
-inspector-swing-utils
+inspector-mzgraph-browser
 ===============
 
 # About Inspector Swing Utils
 
 The primary purpose of Inspector Swing Utils is to provide commonly used classes shared by all the PRIDE Tool Suite. You may also find it useful for your own computational proteomics projects.
+
+# License
+
+inspector-mzgraph-browser is a PRIDE API licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt).
 
 # How to cite it:
 
