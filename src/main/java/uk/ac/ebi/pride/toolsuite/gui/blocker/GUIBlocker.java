@@ -5,7 +5,7 @@ import java.awt.*;
 
 /**
  * @author rwang
- * @author yperez
+ * @author ypriverol
  */
 public abstract class GUIBlocker<S, T> {
     public enum Scope {

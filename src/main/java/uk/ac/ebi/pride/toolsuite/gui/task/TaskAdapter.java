@@ -2,7 +2,7 @@ package uk.ac.ebi.pride.toolsuite.gui.task;
 
 /**
  * @author rwang
- * @author yperez
+ * @author ypriverol
  * Time: 10:49:47
  */
 public abstract class TaskAdapter<T, V> extends Task<T, V>{
