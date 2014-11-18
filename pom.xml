@@ -62,10 +62,19 @@
         <itext.version>4.2.0</itext.version>
         <batik.version>1.6-1</batik.version>
         <math3.version>3.0</math3.version>
+        <balloontip.version>1.2</balloontip.version>
 
     </properties>
 
     <dependencies>
+
+        <!-- BalloonTip dependency-->
+        <dependency>
+            <groupId>net.java.balloontip</groupId>
+            <artifactId>balloontip</artifactId>
+            <version>${balloontip.version}</version>
+        </dependency>
+
         <!-- logging dependencies -->
         <dependency>
             <groupId>org.slf4j</groupId>
