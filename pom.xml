@@ -226,8 +226,8 @@
     </distributionManagement>
     <!--scm git config-->
     <scm>
-        <connection>scm:git:github.com/PRIDE-Toolsuite/inspector-swing-utils.git</connection>
-        <developerConnection>scm:git:git@github.com:PRIDE-Toolsuite/inspector-swing-utils.git</developerConnection>
+        <connection>scm:git:https://github.com/PRIDE-Toolsuite/inspector-swing-utils.git</connection>
+        <developerConnection>scm:git:https://github.com:PRIDE-Toolsuite/inspector-swing-utils.git</developerConnection>
         <url>https://github.com/PRIDE-Toolsuite/inspector-swing-utils.git</url>
         <tag>HEAD</tag>
     </scm>
